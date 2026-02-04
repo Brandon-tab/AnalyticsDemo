@@ -2,7 +2,7 @@ const listData = [
     {
         title: "Mickey 17",
         description: "Mickey 17, known as an &quot;expendable&quot; goes on a dangerous journey to colonize an ice planet.",
-        thumbnail: "../img/slider01.jpg",
+        thumbnail: "./img/slider01.jpg",
         time: "137",
         year: 2025,
         score: "7.0"
@@ -10,7 +10,7 @@ const listData = [
     {
         title: "Adolescence",
         description: "When a 13-year-old is accused of the murder of a classmate, his family, therapist and the detective in charge are all left asking what really happened.",
-        thumbnail: "../img/slider02.jpg",
+        thumbnail: "./img/slider02.jpg",
         time: "65",
         year: 2025,
         score: "8.5"
@@ -18,7 +18,7 @@ const listData = [
     {
         title: "Interstellar",
         description: "When Earth becomes uninhabitable in the future, a farmer and ex-NASA pilot, Joseph Cooper, is tasked to pilot a spacecraft, along with a team of researchers, to find a new planet for humans.",
-        thumbnail: "../img/slider03.jpg",
+        thumbnail: "./img/slider03.jpg",
         time: "169",
         year: 2014,
         score: "8.7"
@@ -26,7 +26,7 @@ const listData = [
     {
         title: "Snow White",
         description: `A princess joins forces with seven dwarfs to liberate her kingdom from her cruel stepmother the Evil Queen. A live-action adaptation of the 1937 Disney animated film "Snow White and the Seven Dwarfs".`,
-        thumbnail: "../img/slider04.jpg",
+        thumbnail: "./img/slider04.jpg",
         time: "109",
         year: 2025,
         score: 2.6
@@ -34,7 +34,7 @@ const listData = [
     {
         title: "The Electric State",
         description: "An orphaned teen hits the road with a mysterious robot to find her long-lost brother, teaming up with a smuggler and his wisecracking sidekick.",
-        thumbnail: "../img/slider05.jpg",
+        thumbnail: "./img/slider05.jpg",
         time: "128",
         year: 2025,
         score: "6.0"
@@ -42,7 +42,7 @@ const listData = [
     {
         title: "Gisaengchung",
         description: "Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.",
-        thumbnail: "../img/slider06.jpg",
+        thumbnail: "./img/slider06.jpg",
         time: "132",
         year: 2.19,
         score: "8.5"
@@ -50,7 +50,7 @@ const listData = [
     {
         title: "The Dark Knight",
         description: "When a menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman, James Gordon and Harvey Dent must work together to put an end to the madness.",
-        thumbnail: "../img/slider07.jpg",
+        thumbnail: "./img/slider07.jpg",
         time: "152",
         year: 2008,
         score: "9.0"
