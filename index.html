@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOVIE CLUB</title>
+</head>
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/reset.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+<body>
+    <header class="site-header">
+        <div class="flex-container">
+            <div class="menu">
+                <img src="img/menu.png" class="logo" id="menuIcon">
+            </div>
+            <div>
+                <ul>
+                    <img src="img/logo.png" class="logo">
+                    <li data-target="browse" class="state">BROWSE</li>
+                    <li data-target="all-films" class="state">ALL FILMS</li>
+                    <li data-target="join-us" class="state">JOIN US</li>
+                    <li data-target="FAQ" class="state">FAQ</li>
+                </ul>
+            </div>
+            <div id="singIn">
+                Sign In
+            </div>
+        </div>
+    </header>
+    <!-- Menus spread across the screen -->
+    <div class="fullscreen-menu" id="fullscreenMenu">
+        <ul>
+            <li data-target="browse">BROWSE</li>
+            <li data-target="all-films">ALL FILMS</li>
+            <li data-target="join-us">JOIN US</li>
+            <li data-target="FAQ">FAQ</li>
+        </ul>
+        <span class="close-btn" id="closeBtn">&times;</span>
+    </div>
+
+    <main id="main-content">
+        <div id="browse" class="content-section">
+            <div class="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/carousel01.avif">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/carousel02.avif">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/carousel03.avif">
+                    </div>
+                </div>
+                <button class="carousel-control prev">&#10094;</button>
+                <button class="carousel-control next">&#10095;</button>
+                <div class="carousel-indicators">
+                    <span class="indicator active" data-index="0"></span>
+                    <span class="indicator" data-index="1"></span>
+                    <span class="indicator" data-index="2"></span>
+                </div>
+            </div>
+            <div class="sw-container">
+                <div class="sw-carousel">
+                    <div class="sw-carousel-item">
+                        <img src="img/carousel01.avif" alt="Image 1">
+                    </div>
+                    <div class="sw-carousel-item">
+                        <img src="img/carousel02.avif" alt="Image 2">
+                    </div>
+                    <div class="sw-carousel-item">
+                        <img src="img/carousel03.avif" alt="Image 3">
+                    </div>
+                </div>
+                <div class="sw-carousel-dots">
+                </div>
+            </div>
+
+            <div class="browse-main">
+                <div class="browseContent">
+                    <div class="browse-title">
+                        <span>Movie Recommendations</span>
+                        <span style="cursor: pointer;">View all</span>
+                    </div>
+                    <div class="slider-container">
+                        <button class="slider-button left-button">&lt;</button>
+                        <div class="slider">
+                            <div class="slider-item">
+                                <img src="img/slider01.jpg">
+                            </div>
+                            <div class="slider-item">
+                                <img src="img/slider02.jpg">
+                            </div>
+                            <div class="slider-item">
+                                <img src="img/slider03.jpg">
+                            </div>
+                            <div class="slider-item">
+                                <img src="img/slider04.jpg">
+                            </div>
+                            <div class="slider-item">
+                                <img src="img/slider05.jpg">
+                            </div>
+                            <div class="slider-item">
+                                <img src="img/slider06.jpg">
+                            </div>
+                            <div class="slider-item">
+                                <img src="img/slider07.jpg">
+                            </div>
+                        </div>
+                        <button class="slider-button right-button">&gt;</button>
+                    </div>
+
+                    <div class="mc-slider-container">
+                        <div class="mc-slider">
+                            <div class="mc-slider-track">
+                                <div class="mc-slide">
+                                    <img src="img/slider01.jpg">
+                                </div>
+                                <div class="mc-slide">
+                                    <img src="img/slider02.jpg">
+                                </div>
+                                <div class="mc-slide">
+                                    <img src="img/slider03.jpg">
+                                </div>
+                                <div class="mc-slide">
+                                    <img src="img/slider04.jpg">
+                                </div>
+                                <div class="mc-slide">
+                                    <img src="img/slider05.jpg">
+                                </div>
+                                <div class="mc-slide">
+                                    <img src="img/slider06.jpg">
+                                </div>
+                                <div class="mc-slide">
+                                    <img src="img/slider07.jpg">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mc-slider-dots"></div>
+
+                        <div class="mc-slider-nav">
+                            <button class="mc-nav-btn mc-prev-btn">Previous</button>
+                            <button class="mc-nav-btn mc-next-btn">Next</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <footer class="browse-footer">
+                <div class="footer-links">
+                    <div class="jdbICi">
+                        <h2>Follow us on social</h2>
+                        <ul>
+                            <li>
+                                <img src="img/TikTok.png">
+                            </li>
+                            <li>
+                                <img src="img/instagram.png">
+                            </li>
+                            <li>
+                                <img src="img/x-48.png">
+                            </li>
+                            <li>
+                                <img src="img/085_Youtube.png">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <div id="all-films" class="content-section" style="display: none;">
+            <div class="list-container" id="listContainer">
+            </div>
+
+            <div class="pagination" id="pagination">
+                <button class="page-button" id="prevButton" style="display: none;">Previous</button>
+                <div id="pageNumbers"></div>
+                <button class="page-button" id="nextButton" class="next-button">Next</button>
+            </div>
+
+            <div class="movie-modal-overlay active">
+                <div class="movie-modal">
+                    <div class="movie-modal-header">
+                        <button class="movie-modal-close" onclick="modalClose()">&times;</button>
+                    </div>
+                    <div class="movie-modal-body">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="join-us" class="content-section" style="display: none;">
+            <div class="join-section">
+                <div class="joinUs-container">
+                    <h1>Movie Club</h1>
+                    <h2>Register Club</h2>
+                    <form id="registrationForm">
+                        <input type="text" id="name" placeholder="Enter your name">
+                        <div id="nameError" class="error-message"></div>
+
+                        <input type="email" id="email" placeholder="Enter your email">
+                        <div id="emailError" class="error-message"></div>
+
+                        <input type="password" id="password" placeholder="Enter your password">
+                        <div id="passwordError" class="error-message"></div>
+
+                        <input type="password" id="password2" placeholder="Please enter your password again">
+                        <div id="passwordError2" class="error-message"></div>
+
+                        <input type="submit" value="Register">
+                    </form>
+                    <div class="terms">© Terms and Conditions</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="sign-in" class="content-section" style="display: none;">
+            <div class="join-section">
+                <div class="joinUs-container">
+                    <h1>Movie Club</h1>
+                    <h2>Login</h2>
+                    <form id="signInRegistrationForm">
+
+                        <input type="email" id="signInEmail" placeholder="Enter your email">
+                        <div id="signInEmailError" class="error-message"></div>
+
+                        <input type="password" id="signInPassword" placeholder="Enter your password">
+                        <div id="signInPasswordError" class="error-message"></div>
+
+                        <input type="submit" value="sign in">
+                    </form>
+                    <div class="terms">© Terms and Conditions</div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="FAQ" class="content-section" style="display: none;">
+            <div class="faq-container">
+                <h1>Frequently Asked Questions</h1>
+                
+                <div class="faq-item">
+                    <button class="faq-question">What is the purpose of the film club?</button>
+                    <div class="faq-answer">
+                        <ol>
+                            <li>We are a non-profit organization dedicated to providing a platform for film enthusiasts to explore cinema through screenings, discussions, themed events, and more.</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">How do I join the club? Is there a membership fee?</button>
+                    <div class="faq-answer">
+                        <ul>
+                            <li>Membership is currently free! Just fill out the registration form (link provided) or contact an admin to join. If any fees (e.g., venue costs) apply in the future, we will notify members in advance.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">How often does the club meet, and when?</button>
+                    <div class="faq-answer">
+                        <ul>
+                            <li>We typically host offline or online events weekly/monthly. Exact schedules are announced via group chat/website/email.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">What types of events do you host?</button>
+                    <div class="faq-answer">
+                        <p>Activities include but are not limited to: themed screenings, director retrospectives, post-screening discussions, guest lectures, and group trips to film festivals.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">How can I recommend a movie or suggest an event theme?</button>
+                    <div class="faq-answer">
+                        <ul>
+                            <li> You can submit ideas via WeChat/email/post-event polls. We prioritize suggestions based on majority interest.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">Where are offline events held? How do I join online?</button>
+                    <div class="faq-answer">
+                        <p>Offline events usually take place at the library (address provided). Online meeting links are shared in the member group before events.</p>
+              
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
+<style>
+    .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .faq-container h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+        
+        .faq-item {
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            width: 100%;
+            padding: 15px 20px;
+            text-align: left;
+            background-color: #f8f8f8;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-question:hover {
+            background-color: #e8e8e8;
+        }
+        
+        .faq-question::after {
+            content: '+';
+            font-size: 20px;
+        }
+        
+        .faq-question.active::after {
+            content: '-';
+        }
+        
+        .faq-answer {
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+            background-color: white;
+        }
+        
+        .faq-answer.show {
+            padding: 15px 20px;
+            max-height: 500px;
+        }
+        
+        .faq-answer ol, .faq-answer ul {
+            padding-left: 20px;
+        }
+        
+        .faq-answer li {
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+        
+        .faq-answer p {
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const isActive = question.classList.contains('active');
+  
+                document.querySelectorAll('.faq-answer').forEach(item => {
+                    if (item !== answer) {
+                        item.classList.remove('show');
+                    }
+                });
+                
+                document.querySelectorAll('.faq-question').forEach(item => {
+                    if (item !== question) {
+                        item.classList.remove('active');
+                    }
+                });
+                
+                if (isActive) {
+                    question.classList.remove('active');
+                    answer.classList.remove('show');
+                } else {
+                    question.classList.add('active');
+                    answer.classList.add('show');
+                }
+            });
+        });
+    });
+</script>
+
+<script src="js/index.js"></script>
+<script src="js/join.js"></script>
+<script src="js/list.js"></script>

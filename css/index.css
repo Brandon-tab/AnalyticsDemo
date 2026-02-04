@@ -1,0 +1,849 @@
+/* Base header container styling */
+.site-header {
+    background-color: #141414;/* Dark background color */
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+}
+/* Logo image styling */
+.site-header .logo {
+    width: 50px;
+
+}
+.site-header .flex-container {
+    /* Flexbox properties */
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 64px;
+    margin: 0 25px;
+    color: #fff;
+}
+
+.site-header ul {
+    display: flex; /* Flex layout for navigation items */
+    justify-content: center; /* Centers items horizontally */
+    align-items: center; /* Centers items vertically */
+}
+
+.site-header ul li {
+    padding: 0 25px;
+    cursor: pointer;
+    transition: font-weight 0.2s;
+    /* Add transition effect */
+}
+
+/* The highlight effect when the mouse is hovering */
+.site-header ul li:hover {
+    text-shadow:
+        0.5px 0 0 currentColor,
+        /* Deviation to the right 0.5px */
+        -0.5px 0 0 currentColor,
+        /* Leftward deviation 0.5px */
+        0 0.5px 0 currentColor,
+        /* Downward migration 0.5px */
+        0 -0.5px 0 currentColor;
+    /* Upward migration 0.5px */
+}
+
+/*display*/
+.site-header .state {
+   display: block !important;
+}
+/*menu none*/
+.menu {
+    display: none;
+    cursor: pointer;
+}
+/* Menus spread across the screen */
+.fullscreen-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Translucent black background */
+    z-index: 1000; /* Make sure the menu is at the top */
+    opacity: 0; /* default hidden */
+    visibility: hidden; /* default hidden */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.fullscreen-menu.active {
+    opacity: 1; /* Display menu */
+    visibility: visible; /* Display menu */
+}
+
+.fullscreen-menu ul {
+    list-style: none; /* Remove the default list style */
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    color: #fff;
+    margin-top: 125px;
+}
+
+.fullscreen-menu ul li {
+    padding: 20px 0;
+    margin: 20px 0;
+    background-color: #283038;;
+}
+
+.fullscreen-menu ul li a {
+    color: #fff; 
+    font-size: 24px; 
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease;
+}
+
+.fullscreen-menu ul li a:hover {
+    color: #ff6347; /* Text color when mouse hover */
+}
+
+/* close button */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#singIn {
+    cursor: pointer;
+}
+
+/* A carousel container */
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    /* Hide excess*/
+    height: 37vw;
+}
+
+/* Inner container of a carousel chart */
+.carousel-inner {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Each carousel item */
+.carousel-item {
+    min-width: 100%;
+    /* Each item takes up the entire width */
+    height: 100%;
+    box-sizing: border-box;
+    background-color: #141414;
+}
+
+/* A picture of a carousel */
+.carousel-item img {
+    width: 100%;
+    /* The image width should not exceed the container */
+    height: auto;
+    /* Picture height does not exceed the container */
+    object-fit: cover;
+}
+
+/* Wheel chart control button */
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    opacity: 0;
+    /* Default hiding */
+    transition: opacity 0.3s ease;
+    /* Add transition effect */
+    background-color: transparent;
+}
+/* Left button Position left */
+.carousel-control.prev {
+    left: 10px;
+}
+/* Position the right button to the right */
+.carousel-control.next {
+    right: 10px;
+}
+
+/* The button is displayed when the mouse is hovering */
+.carousel:hover .carousel-control {
+    opacity: 1;
+}
+
+/* Subscript jump container */
+.carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    /* The distance between subscripts */
+}
+
+/* Per index */
+.indicator {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    /* roundness */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* Add transition effect */
+}
+
+/* The currently active subscript */
+.indicator.active {
+    background-color: rgba(255, 255, 255, 1);
+    /* Activation color */
+}
+
+/* The subscript color changes when the mouse hovers */
+.indicator:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.browse-main {
+    background-color: #141414;
+    color: #fff;
+}
+
+.browseContent {
+    margin: 0 40px;
+}
+
+.browse-title {
+    display: flex;
+    justify-content: space-between; /* Space out title and sibling elements */
+    /* Typography styling */
+    font-weight: 700; /* Bold text */
+    text-transform: uppercase; /* All uppercase text */
+    padding: 25px 0; /* Vertical padding only (top/bottom) */
+}
+
+
+.slider-container {
+    display: flex;
+    align-items: center; /* Vertical centering */
+    justify-content: center; /* Horizontal centering */
+    position: relative; /* For absolute positioning of child elements (arrows/dots) */
+    width: 93%; /* Relative width with small margins */
+    margin: 50px 50px 0 50px; /* Top margin only with horizontal spacing */
+    padding-bottom: 50px; /* Bottom padding for visual breathing room */
+}
+
+/* Sliding region */
+.slider {
+    display: flex; /* Establishes flex container for horizontal layout */
+    overflow: hidden; /* Clips content outside container bounds */
+    scroll-behavior: smooth; /* Enables smooth scrolling animation */
+    width: 100%; /* Full width of parent container */
+}
+
+/* Movie card */
+.slider-item {
+    flex: 0 0 20vw; /* flex-grow: 0, flex-shrink: 0, flex-basis: 20vw */
+    margin: 0 1vw; /* Horizontal spacing between cards */
+    background-color: white; /* Card background */
+    text-align: center; /* Content alignment */
+    box-sizing: border-box; /* Includes padding/border in width calculation */
+    height: 27vw; /* Fixed aspect ratio container */
+    cursor: pointer; /* Indicates interactive element */
+}
+
+.slider-item img {
+    width: 100%;
+    height: auto;
+}
+
+.slider-item h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.slider-item p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Left and right button */
+.slider-button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.slider-button:hover {
+    background-color: #555;
+}
+
+.left-button {
+    left: -50px;
+}
+
+.right-button {
+    right: -55px;
+}
+
+.browse-footer {
+    background-color: #141414;
+    color: #fff;
+}
+
+.footer-links {
+    max-width: 1024px;
+    padding: 40px 20vw;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 200px;
+
+}
+
+.jdbICi {
+    border-color: rgb(31, 31, 31);
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.jdbICi h2 {
+    font-weight: 600;
+}
+
+.jdbICi ul {
+    display: flex;
+    margin-top: 10px;
+}
+
+.jdbICi ul li {
+    text-align: center;
+    width: 25%;
+    cursor: pointer;
+}
+
+.jdbICi ul li img {
+    width: 24px;
+    height: 24px;
+}
+
+
+/* list */
+#all-films {
+    background-color: #141414;
+    padding-bottom: 72px;
+}
+
+.list-container {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.list-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 10px;
+    
+}
+
+.list-item:last-child {
+    border-bottom: none;
+}
+
+.thumbnail {
+    width: 100px;
+    height: 150px;
+    border-radius: 4px;
+    object-fit: cover;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.content {
+    flex: 1;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 5px;
+}
+
+.description {
+    margin: 0;
+    color: #666;
+}
+
+/* PAGINATION CONTAINER - Main wrapper for pagination controls */
+.pagination {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Horizontally center buttons */
+    align-items: center; /* Vertically align buttons */
+    margin-top: 20px; /* Space above pagination */
+}
+
+/* PAGINATION BUTTON - Style for individual page buttons */
+.page-button {
+    background: #283038; /* Dark background color */
+    color: white; /* Text color */
+    border: none; /* Remove default borders */
+    border-radius: 4px; /* Slightly rounded corners */
+    padding: 10px 15px; /* Comfortable click area */
+    margin: 0 5px; /* Horizontal spacing between buttons */
+    font-size: 16px; /* Readable text size */
+    cursor: pointer; /* Indicates clickable element */
+}
+
+.page-button:hover {
+    background-color: #0056b3;
+}
+
+.next-button {
+    background-color: #28a745;
+}
+
+.next-button:hover {
+    background-color: #218838;
+}
+
+
+/* Register */
+.join-section {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 92.6vh;
+    margin: 0;
+}
+
+.joinUs-container {
+    text-align: center;
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+}
+
+#join-us h1,
+#sign-in h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #ffcc00;
+}
+
+#join-us h2,
+#sign-in h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+#join-us input,
+#sign-in input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+}
+
+#join-us input[type="submit"],
+#sign-in input[type="submit"] {
+    background-color: #ffcc00;
+    color: #000;
+    cursor: pointer;
+}
+
+#join-us input[type="submit"]:hover,
+#sign-in input[type="submit"]:hover {
+    background-color: #e6b800;
+}
+
+#join-us .terms,
+#sign-in .terms {
+    margin-top: 15px;
+    font-size: 12px;
+    color: #ccc;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* Mobile  carousel */
+.sw-container {
+    width: 100%; /* Full width of parent container */
+    overflow: hidden; /* Hide overflow content */
+    position: relative; /* Establishes positioning context for dots */
+}
+/* Carousel Track - Horizontal scrolling container */
+.sw-carousel {
+    display: flex; /* Flex layout for horizontal items */
+    transition: transform 0.5s ease; /* Smooth sliding animation */
+}
+
+/* Carousel Item - Individual slide container */
+.sw-carousel-item {
+    flex: 0 0 100%; /* No grow/shrink, 100% width (1 item per view) */
+    box-sizing: border-box; /* Includes padding/border in width calc */
+}
+
+/* Carousel Image Styling */
+.sw-carousel-item img {
+    width: 100%; 
+    height: auto; 
+    display: block;
+}
+
+/* Navigation Dots Container */
+.sw-carousel-dots {
+    position: absolute; /* Fixed positioning */
+    bottom: 10px; /* 10px from bottom */
+    left: 50%; /* Horizontal centering */
+    transform: translateX(-50%); /* Precise center alignment */
+    display: flex; /* Horizontal dot layout */
+    gap: 8px; /* Space between dots */
+}
+
+/* Individual Dot Styling */
+.sw-carousel-dots .sw-dot {
+    width: 8px; /* Dot diameter */
+    height: 8px; /* Dot diameter */
+    background-color: rgba(255, 255, 255, 0.5); /* Inactive state */
+    border-radius: 50%; /* Perfect circle */
+    cursor: pointer; /* Interactive indicator */
+    transition: background-color 0.3s ease; /* Color transition */
+}
+
+/* Active Dot State */
+.sw-carousel-dots .sw-dot.sw-active {
+    background-color: rgba(255, 255, 255, 1); /* Active state */
+}
+
+
+  /*  (My Card) */
+.mc-slider-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto -1px auto;
+    position: relative;
+}
+
+.mc-slider {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.mc-slider-track {
+    display: flex;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.mc-slide {
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    user-select: none;
+}
+
+.mc-slide img {
+    width: 100%;
+    height: 150%;
+}
+
+.mc-slide h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.mc-slide p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    max-width: 80%;
+}
+
+.mc-slider-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.mc-slider-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+.mc-slider-track {
+    transition: transform 1s;
+}
+
+.mc-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ccc;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.mc-dot.active {
+    background: #555;
+}
+
+.mc-nav-btn {
+    background: #fff;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    font-weight: bold;
+}
+
+.mc-nav-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+ /* Pop-up mask layer style */
+.movie-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px); /* Ground glass effect*/
+    display: none;
+}
+
+/* Active state of the mask layer */
+.movie-modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Pop-up content container */
+.movie-modal {
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    background: #1a1a1a;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+/* The animation effect when the pop-up is activated */
+.movie-modal-overlay.active .movie-modal {
+    transform: translateY(0);
+}
+
+/* Box head - contains the close button */
+.movie-modal-header {
+    position: relative;
+    height: 60px;
+    overflow: hidden;
+}
+
+
+/* Close button */
+.movie-modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.7);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.movie-modal-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(90deg);
+}
+
+/* Displays the body content */
+.movie-modal-body {
+    padding: 0px 25px 25px 25px; /* Top:0, Left/Right:25px, Bottom:25px */
+    display: flex; /* Flex container */
+    flex-direction: column; /* Vertical stacking */
+    gap: 20px; /* Consistent spacing between child elements */
+    color: #e0e0e0; /* Light gray text color */
+    overflow-y: auto; /* Vertical scrolling when content overflows */
+}
+
+/* Movie basic information line */
+.movie-meta-row {
+    display: flex; /* Horizontal layout */
+    align-items: center; /* Vertical centering of items */
+    gap: 15px; /* Consistent spacing between elements */
+    flex-wrap: wrap; /* Allows wrapping on small screens */
+}
+
+/* Movie poster */
+.movie-poster {
+    width: 150px;
+    height: 225px;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* movie title */
+.movie-title {
+    margin: 10px 0;
+    font-size: 28px;
+    color: white;
+    font-weight: 700;
+}
+
+/* movie meta */
+.movie-meta {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 14px;
+    color: #b3b3b3;
+}
+
+/* Scoring style */
+.movie-rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 18px;
+    color: #ffd700;
+}
+
+
+/* 剧情简介 */
+.movie-overview {
+    line-height: 1.7;
+    margin: 10px 0;
+}
+
+
+/* iPad fit (width 768px to 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .site-header .state {
+        display: none !important;
+     }
+     .menu {
+        display: inline-block;
+     }
+     .carousel {
+        display: none;
+     }
+     .sw-container {
+        display: block;
+     }
+     .mc-slider-container {
+        display: block;
+     }
+     .slider-container {
+        display: none;
+      }
+}
+
+
+/* Mobile adaptation (Max width 767px */
+@media (max-width: 767px) {
+    .site-header .state {
+        display: none !important;
+     }
+     .menu {
+        display: inline-block;
+     }
+     .carousel {
+        display: none;
+     }
+     .sw-container {
+        display: block;
+     }
+     .mc-slider-container {
+        display: block;
+     }
+     .slider-container {
+        display: none;
+      }
+}
+/* PC Min 1025 */
+@media (min-width: 1025px) {
+    .fullscreen-menu {
+        display: none;
+     }
+     .carousel {
+        display: block;
+     }
+     .sw-container {
+        display: none;
+     }
+     .mc-slider-container {
+        display: none;
+     }
+     .slider-container {
+       display: flex;
+     }
+}
+
